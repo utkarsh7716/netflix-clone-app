@@ -1,16 +1,20 @@
-# React + Vite
+🚀 End-to-End CI/CD Pipeline using Jenkins, Docker & Kubernetes (kind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates a complete end-to-end CI/CD pipeline using Jenkins, where a sample Netflix-style frontend application is automatically built, containerized, and deployed to Kubernetes (kind).
 
-Currently, two official plugins are available:
+The goal of this project is to practically demonstrate CI/CD concepts, not just theory.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📌 High-Level Architecture
+GitHub (Source Code)
+        |
+        v
+     Jenkins
+        |
+        |-- Build Docker Image
+        |-- Load Image into kind
+        |-- Deploy to Kubernetes
+        v
+Kubernetes (kind Cluster)
+        |
+        v
+  Netflix Clone App 
